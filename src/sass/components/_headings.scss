@@ -1,0 +1,12 @@
+@use '../abstracts/' as *;
+
+.heading-1 {
+  // these are mixins in which only 2 values r changing mostly so we call it and pass diff values to create a utility cls
+  @include heading($heading-1-font-size, $heading-1-color);
+}
+.heading-2 {
+  @include heading($heading-2-font-size, $heading-2-color);
+}
+.heading-3 {
+  @include heading($heading-3-font-size, $heading-3-color);
+}

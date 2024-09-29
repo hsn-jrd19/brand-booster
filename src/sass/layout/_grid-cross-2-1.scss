@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+.grid-cross-2-1 {
+  display: grid;
+  gap: var(--grid-gap, $grid-gap);
+
+  @include mq(medium) {
+    grid-template-columns: repeat(3, 1fr);
+    & > :nth-child(2),
+    & > :nth-child(3) {
+      grid-column: span 2;
+    }
+  }
+}
